@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "stdin": "nodemon stdinTest.js",
-    "readcsv": "nodemon readCsv.js"
+    "stdin": "nodemon src/tasks/week1/stdinTest.js",
+    "read": "nodemon src/tasks/week1/readCsv.js",
+    "write": "nodemon src/tasks/week1/write.js"
   },
   "repository": {
     "type": "git",
