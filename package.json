@@ -5,25 +5,35 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "stdin": "nodemon src/tasks/week1/stdinTest.js",
-    "read": "nodemon src/tasks/week1/readCsv.js",
-    "write": "nodemon src/tasks/week1/write.js"
+    "stdin": "nodemon src/tasks/task1/stdinTest.js",
+    "readcsv": "nodemon src/tasks/task1/readCsv.js",
+    "write": "nodemon src/tasks/task1/write.js",
+    "writeimport": "nodemon src/tasks/task1/writeimport.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/storyofxiaoxiao/node-serena.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Serena Xu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/storyofxiaoxiao/node-serena/issues"
   },
   "homepage": "https://github.com/storyofxiaoxiao/node-serena#readme",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@babel/register": "^7.13.8",
     "csvtojson": "^2.0.10",
     "nodemon": "^2.0.7",
     "utf8": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-transform-arrow-functions": "^7.13.0",
+    "@babel/preset-env": "^7.13.15",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
   }
 }

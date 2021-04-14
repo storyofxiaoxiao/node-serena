@@ -1,10 +1,10 @@
-const csvtojson = require("csvtojson");
-const FILE_PATH = require('../../utils/consts')
+const csv = require("csvtojson");
+const FILE_PATH = require('../../utils/consts');
 /**
- *  Task: convert csvfile to jsonobject
+ *  Task1.2: convert csvfile to jsonobject
  *  ！！！important, only support .csv , can't be .xlsx
  */
-csvtojson()
+csv()
     .fromFile(FILE_PATH.FILE_CSV)
     .then((jsonObj) => {
         console.log('jsonObj: ', jsonObj);

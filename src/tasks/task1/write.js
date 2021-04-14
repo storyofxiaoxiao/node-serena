@@ -1,6 +1,6 @@
-const csvtojson = require("csvtojson");
-const FILE_PATH = require('../../utils/consts')
-const fs = require('fs');
+import csvtojson from "csvtojson";
+import FILE_PATH from '../../utils/consts'
+import fs from 'fs';
 // fs.readFile()
 // csvtojson({ output: "line" })
 //     .fromFile(FILE_PATH.FILE_CSV)
@@ -17,7 +17,7 @@ const fs = require('fs');
 /**
  *  Task: convert csvfile to jsonobject line by line
  */
-const writeStream = fs.createWriteStream('src/output/writeText.txt', { encoding: 'utf8' });
+const writeStream = fs.createWriteStream('../../output/writeText.txt', { encoding: 'utf8' });
 fs.createReadStream(FILE_PATH.FILE_CSV)
     .pipe(csvtojson())
     .on('data', (data) => writeStream.write(data))
