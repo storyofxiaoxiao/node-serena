@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "stdin": "nodemon src/tasks/task1/stdinTest.js",
-    "readcsv": "nodemon src/tasks/task1/readCsv.js",
-    "write": "nodemon src/tasks/task1/write.js",
-    "writeimport": "nodemon src/tasks/task1/writeimport.js"
+    "task1-1": "nodemon --exec babel-node  src/tasks/task1/task1-1.js",
+    "task1-2": "nodemon --exec babel-node  src/tasks/task1/task1.2.js",
+    "write": "nodemon --exec babel-node  src/tasks/task1/write.js",
+    "task1-3": "nodemon --exec babel-node  src/tasks/task1/task1-3.js"
   },
   "repository": {
     "type": "git",
