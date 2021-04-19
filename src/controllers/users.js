@@ -20,7 +20,7 @@ export const createUser = (req, res) => {
         ...user,
         id: uuidv4(),
     });
-    res.send(`User with the username ${userWithId.username} added to the database.`);
+    res.send(`User with the username ${user.username} added to the database.`);
 }
 
 export const getUser = (req, res) => {
@@ -31,14 +31,11 @@ export const getUser = (req, res) => {
 
 export const updateUser = (req, res) => {
     const { id } = req.params;
-    const { username, password, age, isDeleted } = req.body;
-    const userToBeUpdated = users.filter((user) => user.id === id);
+    const { age } = req.body;
+    const userToBeUpdated = users.filter((user) => user.id == id);
     // remove curly braces in single line
-    if (username) userToBeUpdated.username = username;
-    if (password) userToBeUpdated.password = password;
     if (age) userToBeUpdated.age = age;
-
-    res.send(`User with the username ${username} added to the database.`);
+    res.send(`User with the username ${age} added to the database.`);
 }
 export const deleteUser = (req, res) => {
     const { id } = req.params;
