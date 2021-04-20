@@ -1,7 +1,14 @@
 
 import { v4 as uuidv4 } from "uuid";
 
+// import { createValidator } from "express-joi-validation";
+// import { Joi } from "joi"
 let users = [];
+
+// const querySchema = Joi.object({
+//     query: Joi.string().required()
+// })
+
 export const getUsers = (req, res) => {
     users = users.filter((user) => !user.isDeleted);
     res.send(users);
